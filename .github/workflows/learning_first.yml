@@ -1,0 +1,19 @@
+name: my first action
+
+on: push
+
+jobs: 
+
+    buildjob: 
+        runs-on: ubuntu-latest
+        steps: 
+        - name: action repo
+          uses: actions/checkout@v4
+        
+        - name: message my name
+          run: echo"my name is lewis"
+        - name: listfiles
+          run: ls -ltra
+        - name: readfiles
+          run: cat README.md
+         
