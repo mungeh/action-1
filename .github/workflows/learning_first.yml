@@ -1,5 +1,4 @@
 name: my first action
-
 on: push
 
 jobs: 
@@ -11,7 +10,7 @@ jobs:
           uses: actions/checkout@v4
         
         - name: message my name
-          run: echo"my name is lewis"
+          run: echo "my name is lewis"
         - name: listfiles
           run: ls -ltra
         - name: readfiles
