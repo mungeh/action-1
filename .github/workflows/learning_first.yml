@@ -8,12 +8,11 @@ jobs:
         steps: 
         - name: action repo
           uses: actions/checkout@v4
-        - name: readfiles/message
-          run: |
-           sudo apt-get install ansible -y
-           echo "my name is lewis"
-           ls -ltra
-           cat README.md
+       
+        - name: list repofiles
+          run: ls -ltra
+        - name: executing shell script
+          run: ./ascii_file.sh
         
         # name: message my name
         #  run: echo "my name is lewis"
