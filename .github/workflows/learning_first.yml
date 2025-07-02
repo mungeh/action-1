@@ -8,6 +8,9 @@ jobs:
         steps: 
         - name: action repo
           uses: actions/checkout@v4
+
+        - name: change permissionn
+          run: chmod +x ascii_file.sh
        
         - name: list repofiles
           run: ls -ltra
