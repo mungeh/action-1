@@ -4,6 +4,7 @@ on: push
 
 jobs:
     build_1:
+        
         runs-on: ubuntu-latest
         steps:
         - name: action repo
@@ -23,6 +24,7 @@ jobs:
           
 
     Test-1:
+        needs: build_1
         runs-on: ubuntu-latest
 
         steps:
@@ -38,6 +40,7 @@ jobs:
           
 
     deploy-1:
+        needs: Test-1
         runs-on: ubuntu-latest
 
         steps:
