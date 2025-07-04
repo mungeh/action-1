@@ -1,0 +1,50 @@
+name: multiple deploy
+
+on: push
+
+jobs:
+    build_1:
+        runs-on: ubuntu-latest
+        steps:
+        - name: action repo
+          uses: actions/checkout@v4
+
+        
+
+        - name: install cowsay
+          run: sudo apt-get install cowsay -y
+
+        - name: read the cmd
+          run: cowsay -f dragon "run for your life-----raww" >> dragon.txt
+
+        - name: timer
+          run: sleep 30s
+
+          
+
+    Test-1:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: files stored
+          run: cowsay -i "dragon" dragon.txt
+
+        - name: timer2
+          run: sleep 30s
+
+
+
+          
+          
+
+    deploy-1:
+        runs-on: ubuntu-latest
+
+        steps:
+
+        - name: deployment
+          run: cat dragon.txt
+
+
+
+          
