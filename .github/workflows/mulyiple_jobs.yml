@@ -18,8 +18,12 @@ jobs:
         - name: read the cmd
           run: cowsay -f dragon "run for your life-----raww" >> dragon.txt
 
-        - name: timer
-          run: sleep 30s
+        - name: upload artifact
+          uses: actions/upload-artifact@v4
+          with: 
+            name: uploaded artifact
+            path: dragon.txt
+          
 
           
 
@@ -31,8 +35,12 @@ jobs:
         - name: files stored
           run: cowsay -i "dragon" dragon.txt
 
-        - name: timer2
-          run: sleep 30s
+        - name: download artifact
+          uses: actions/download-artifact@v4
+          with: 
+            name: download test artifact
+            
+
 
 
 
@@ -45,8 +53,17 @@ jobs:
 
         steps:
 
-        - name: deployment
-          run: cat dragon.txt
+        - name: download deploy
+          uses: actions/download-artifact@v4
+          with:
+            name: artifact deploy download
+            
+
+        - name: readfile
+          run: |
+           cat dragon.txt
+           echo "deploying......."
+
 
 
 
