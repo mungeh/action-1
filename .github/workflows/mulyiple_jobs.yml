@@ -47,7 +47,7 @@ jobs:
 
 
         - name: test file exist
-          run: grep -r -i "dragon" dragon.txt
+          run: grep -r -i "." "dragon" dragon.txt/
 
         
             
