@@ -15,13 +15,13 @@ jobs:
         - name: install cowsay
           run: sudo apt-get install cowsay -y
 
-        - name: read the cmd
-          run: cowsay -f dragon "run for your life-----raww" >> dragon.txt
+        - name: EXECUTE CMD
+          run: cowsay -f dragon "run for cover" >> dragon.txt
 
-        - name: upload artifact
+        - name: upload artifact text file
           uses: actions/upload-artifact@v4
           with: 
-            name: uploaded artifact
+            name: dragon-text-file
             path: dragon.txt
           
 
@@ -36,11 +36,11 @@ jobs:
         - name: download artifact
           uses: actions/download-artifact@v4
           with: 
-            name: download dragon
+            name: dragon-text-file
             path: dragon.txt
 
 
-        - name: files stored
+        - name: test file exist
           run: grep -i "dragon" dragon.txt
 
         
