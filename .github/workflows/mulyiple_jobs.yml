@@ -32,6 +32,12 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+        
+        - name: Action repo
+          uses: actions/checkout@v4
+
+
+            
 
         - name: download artifact
           uses: actions/download-artifact@v4
