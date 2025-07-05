@@ -19,7 +19,7 @@ jobs:
           run: cowsay -f dragon "run for your life-----raww" >> dragon.txt
 
         - name: upload artifact
-          uses: actions/upload-artifact@v4
+          uses: actions/upload-artifact@v3
           with: 
             name: uploaded artifact
             path: dragon.txt
@@ -34,7 +34,7 @@ jobs:
         steps:
 
         - name: download artifact
-          uses: actions/download-artifact@v4
+          uses: actions/download-artifact@v3
           with: 
             name: download test artifact
 
@@ -58,7 +58,7 @@ jobs:
         steps:
 
         - name: download deploy
-          uses: actions/download-artifact@v4
+          uses: actions/download-artifact@v3
           with:
             name: artifact deploy download
             
