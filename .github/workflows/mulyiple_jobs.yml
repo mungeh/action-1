@@ -32,13 +32,17 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: files stored
-          run: grep -i "dragon" dragon.txt
 
         - name: download artifact
           uses: actions/download-artifact@v4
           with: 
             name: download test artifact
+
+
+        - name: files stored
+          run: grep -i "dragon" dragon.txt
+
+        
             
 
 
