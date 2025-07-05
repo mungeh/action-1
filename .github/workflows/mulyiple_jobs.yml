@@ -16,7 +16,7 @@ jobs:
           run: sudo apt-get install cowsay -y
 
         - name: EXECUTE CMD
-          run: cowsay -f dragon "run for cover" >> dragon.txt
+          run: cowsay -f dragon "run for cover" > dragon.txt
 
         - name: upload artifact text file
           uses: actions/upload-artifact@v4
