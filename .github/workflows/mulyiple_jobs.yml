@@ -33,7 +33,7 @@ jobs:
 
         steps:
         - name: files stored
-          run: cowsay -i "dragon" dragon.txt
+          run: grep -i "dragon" dragon.txt
 
         - name: download artifact
           uses: actions/download-artifact@v4
